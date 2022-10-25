@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { InfoMovies } from "../InfoMovies/InfoMovies";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ApiMoviesDatails } from "../ApiServise/Api";
 import { IResponseMoivesId } from "../Types";
 
