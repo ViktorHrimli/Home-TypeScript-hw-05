@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { InfoMovies } from "../InfoMovies/InfoMovies";
-import { useParams } from "react-router-dom";
+import { useParams, Link, Outlet } from "react-router-dom";
 import { ApiMoviesDatails } from "../ApiServise/Api";
 import { IResponseMoivesId } from "../Types";
 
@@ -20,7 +20,9 @@ const MoviesDatails: FC<{}> = () => {
       <ul>
         <InfoMovies key={idMovies?.id} {...idMovies} />
       </ul>
-      {/* <Link to></Link> */}
+      <Link to="cast">Cast</Link>
+      <Link to="reviewe">Reviewe</Link>
+      <Outlet />
     </div>
   );
 };

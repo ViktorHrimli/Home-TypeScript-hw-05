@@ -16,12 +16,51 @@ interface IResponseMoivesId {
   popularity?: number;
 }
 
+interface ICast {
+  character: string;
+  credit_id: string;
+  gender: number;
+  id: number;
+  known_for_department: string;
+  name: string;
+  order: number;
+  original_name: string;
+  popularity: number;
+  profile_path: string;
+}
+
+interface IReviews {
+  author: string;
+  author_details: {
+    name: string;
+    username: string;
+    avatar_path: string;
+    rating: null | number;
+  };
+  content: string;
+  created_at: string;
+  id: string;
+  updated_at: string;
+  url: string;
+}
+
 type Results = {
-  results: IResponse[];
+  results: IResponse[] | IReviews[];
+};
+
+type ICastRewievs = {
+  cast: ICast[];
 };
 
 interface IPropsGalleryMovies {
   movie: IResponse[];
 }
 
-export type { IResponse, Results, IPropsGalleryMovies, IResponseMoivesId };
+export type {
+  IResponse,
+  Results,
+  IPropsGalleryMovies,
+  IResponseMoivesId,
+  ICastRewievs,
+  ICast,
+};
